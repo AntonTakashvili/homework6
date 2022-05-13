@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_Fragment">
+
+    <fragment
+        android:id="@+id/home_Fragment"
+        android:name="com.example.homework6.fragments.Home_Fragment"
+        android:label="Home_Fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_Fragment_to_dashboard_Fragment"
+            app:destination="@id/dashboard_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboard_Fragment"
+        android:name="com.example.homework6.fragments.Dashboard_Fragment"
+        android:label="Dashboard_Fragment"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_dashboard_Fragment_to_own_Fragment"
+            app:destination="@id/own_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/own_Fragment"
+        android:name="com.example.homework6.fragments.Own_Fragment"
+        android:label="Own_Fragment"
+        tools:layout="@layout/own_fragment">
+        <action
+            android:id="@+id/action_own_Fragment_to_home_Fragment"
+            app:destination="@id/home_Fragment" />
+    </fragment>
+</navigation>
